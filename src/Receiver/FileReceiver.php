@@ -59,7 +59,7 @@ class FileReceiver
     public function __construct($fileIndexOrFile, Request $request, $handlerClass, $chunkStorage = null, $config = null)
     {
         $this->request = $request;
-        $this->file = is_object($fileIndexOrFile) ? $fileIndexOrFile : $request->file($fileIndexOrFile);
+        $this->file = is_object($fileIndexOrFile) ? $fileIndexOrFile : $request->{$fileIndexOrFile};
         $this->chunkStorage = is_null($chunkStorage) ? ChunkStorage::storage() : $chunkStorage;
         $this->config = is_null($config) ? AbstractConfig::config() : $config;
 
