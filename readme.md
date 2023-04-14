@@ -10,7 +10,7 @@
 
 > Supports Laravel from 5.2 to 9 (covered by integration tests for 7/8/9 versions).
 
-Easy to use service/library for chunked upload with supporting multiple JS libraries on top of Laravel's file upload with low memory footprint in mind. 
+Easy to use service/library for chunked upload with supporting multiple JS libraries on top of Laravel's file upload with low memory footprint in mind.
 
 Supports feature as [cross domains requests](https://github.com/pionl/laravel-chunk-upload/wiki/cross-domain-requests), automatic clean schedule and easy usage.
 
@@ -23,7 +23,7 @@ Example repository with **integration tests** can be found in [laravel-chunk-upl
 **1. Install via composer**
 
 ```
-composer require pion/laravel-chunk-upload
+composer require starmoozie/laravel-chunk-upload
 ```
 
 **2. Publish the config (Optional)**
@@ -38,16 +38,16 @@ Setup consists of 3 steps:
 
 1. Integrate your controller that will handle the file upload. [How to](https://github.com/pionl/laravel-chunk-upload/wiki/controller)
 2. Set a route for the controller. [How to](https://github.com/pionl/laravel-chunk-upload/wiki/routing)
-2. Choose your front-end provider below (we support multiple providers in single controller) 
+3. Choose your front-end provider below (we support multiple providers in single controller)
 
-| Library | Wiki | single & chunk upload | simultaneous uploads | In [example project](https://github.com/pionl/laravel-chunk-upload-example) | Author |
-|---- |----|----|----| ---- | ---- |
-| [resumable.js](https://github.com/23/resumable.js) | [Wiki](https://github.com/pionl/laravel-chunk-upload/wiki/resumable-js) | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | [@pionl](https://github.com/pionl) |
-| [DropZone](https://github.com/dropzone/dropzone) | [Wiki](https://github.com/pionl/laravel-chunk-upload/wiki/dropzone) | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | [@pionl](https://github.com/pionl) |
-| [jQuery-File-Upload](https://github.com/blueimp/jQuery-File-Upload) | [Wiki](https://github.com/pionl/laravel-chunk-upload/wiki/jquery-file-upload)  | :heavy_check_mark: | :heavy_multiplication_x: | :heavy_check_mark: | [@pionl](https://github.com/pionl) |
-| [Plupload](https://github.com/moxiecode/plupload) | [Wiki](https://github.com/pionl/laravel-chunk-upload/wiki/plupload) | :heavy_check_mark: | :heavy_multiplication_x: | :heavy_multiplication_x: | [@pionl](https://github.com/pionl) |
-| [simple uploader](https://github.com/simple-uploader) | :heavy_multiplication_x: | :heavy_check_mark: | :heavy_multiplication_x: | :heavy_multiplication_x: | [@dyktek](https://github.com/dyktek) |
-| [ng-file-upload](https://github.com/danialfarid/ng-file-upload) | [Wiki](https://github.com/pionl/laravel-chunk-upload/wiki/ng-file-upload) | :heavy_check_mark: | :heavy_multiplication_x: | :heavy_multiplication_x: | [@L3o-pold](https://github.com/L3o-pold) |
+| Library                                                             | Wiki                                                                          | single & chunk upload | simultaneous uploads     | In [example project](https://github.com/pionl/laravel-chunk-upload-example) | Author                                   |
+| ------------------------------------------------------------------- | ----------------------------------------------------------------------------- | --------------------- | ------------------------ | --------------------------------------------------------------------------- | ---------------------------------------- |
+| [resumable.js](https://github.com/23/resumable.js)                  | [Wiki](https://github.com/pionl/laravel-chunk-upload/wiki/resumable-js)       | :heavy_check_mark:    | :heavy_check_mark:       | :heavy_check_mark:                                                          | [@pionl](https://github.com/pionl)       |
+| [DropZone](https://github.com/dropzone/dropzone)                    | [Wiki](https://github.com/pionl/laravel-chunk-upload/wiki/dropzone)           | :heavy_check_mark:    | :heavy_check_mark:       | :heavy_check_mark:                                                          | [@pionl](https://github.com/pionl)       |
+| [jQuery-File-Upload](https://github.com/blueimp/jQuery-File-Upload) | [Wiki](https://github.com/pionl/laravel-chunk-upload/wiki/jquery-file-upload) | :heavy_check_mark:    | :heavy_multiplication_x: | :heavy_check_mark:                                                          | [@pionl](https://github.com/pionl)       |
+| [Plupload](https://github.com/moxiecode/plupload)                   | [Wiki](https://github.com/pionl/laravel-chunk-upload/wiki/plupload)           | :heavy_check_mark:    | :heavy_multiplication_x: | :heavy_multiplication_x:                                                    | [@pionl](https://github.com/pionl)       |
+| [simple uploader](https://github.com/simple-uploader)               | :heavy_multiplication_x:                                                      | :heavy_check_mark:    | :heavy_multiplication_x: | :heavy_multiplication_x:                                                    | [@dyktek](https://github.com/dyktek)     |
+| [ng-file-upload](https://github.com/danialfarid/ng-file-upload)     | [Wiki](https://github.com/pionl/laravel-chunk-upload/wiki/ng-file-upload)     | :heavy_check_mark:    | :heavy_multiplication_x: | :heavy_multiplication_x:                                                    | [@L3o-pold](https://github.com/L3o-pold) |
 
 **Simultaneous uploads:** The library must send last chunk as last, otherwise the merging will not work correctly.
 
@@ -70,18 +70,16 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for how to contribute changes. All contri
 > Laravel 5/6 should be still supported but we are not testing them via automation sccripts
 
 | Version | PHP           |
-|---------|---------------| 
-| 10.*    | 8.1, 8.2      |
-| 9.*     | 8.0, 8.1      |
-| 8.*     | 7.4, 8.0, 8.1 |
-| 7.*     | 7.4           |
-
-
+| ------- | ------------- |
+| 10.\*   | 8.1, 8.2      |
+| 9.\*    | 8.0, 8.1      |
+| 8.\*    | 7.4, 8.0, 8.1 |
+| 7.\*    | 7.4           |
 
 ## Copyright and License
 
 [laravel-chunk-upload](https://github.com/pionl/laravel-chunk-upload)
-was written by [Martin Kluska](http://kluska.cz) and is released under the 
+was written by [Martin Kluska](http://kluska.cz) and is released under the
 [MIT License](LICENSE.md).
 
 Copyright (c) 2016 and beyond Martin Kluska
