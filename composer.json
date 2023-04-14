@@ -42,6 +42,5 @@
         "Pion\\Laravel\\ChunkUpload\\Providers\\ChunkUploadServiceProvider"
       ]
     }
-  },
-  "minimum-stability": "stable"
+  }
 }
